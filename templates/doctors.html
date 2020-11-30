@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block content %}
+<br><br><br><br><br><br><br><br><br><br>
+
+{% for doctor in doctors.items %}
+	<h4>{{doctor.id }} - {{ doctor.name }} - {{ doctor.speciality }}</h4>
+	<br>
+{% endfor %}
+
+{% for page in doctors.iter_pages() %}
+	{% if page %}
+		<a href="{{ url_for('doctors', page_num = page) }}">{{ page }}</a>
+	{% else %}
+		...
+	{% endif %}
+{% endfor %}
+<br>
+{% endblock %}

@@ -1,0 +1,11 @@
+var infection = ["Mock", "icSARS", "H1N1", "dORF6", "BatSRBD"]
+var replicate = [1, 2, 3]
+
+var i;
+var j;
+for(i = 0; i < infection.length; i++) {
+	for(j = 0; j < replicate.length; j++){
+		print('hi');
+		db.GEO.find({"Characteristics [infection code]" : infection[i], "Characteristics [biological replicate]" : replicate[j]}).count();
+	}
+}

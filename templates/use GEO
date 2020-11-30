@@ -1,0 +1,11 @@
+use GEO
+
+function usp_knn(probeArray1, probeArray2) {
+	result = 0
+	for(let i = 0; i < probeArray1.length; i++) {
+		result += Math.pow((probeArray2[i] - probeArray1[i]), 2)
+	}
+	return Math.sqrt(result)
+}
+
+usp_knn(db.genome_icSARS.find()[0]['probeArray'], db.genome_icSARS.find()[1]['probeArray'])

@@ -1,0 +1,54 @@
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+{% with messages = get_flashed_messages(with_categories = true) %}
+	{% if messages %}
+		{% for category, message in messages %}
+			<div class="alert alert-{{ category }}">
+				{{ message }}
+			</div>
+		{% endfor %}
+	{% endif %}
+{% endwith %}
+    <div class="container d-flex align-items-center">
+      <a href="{{ url_for('home') }}" ><img src="{{ url_for('static', filename = 'assets/img/healthcredit3.png') }}" alt="" width="150" height="150" class="img-fluid"></a>
+
+      <h1 class="logo mr-auto"><a href="{{ url_for('home') }}">HealthCredit</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+		 <!-- class="active" -->
+		 {% if underline and underline == 'home' %}
+          <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+		 {% else %}
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+		 {% endif %}
+		  {% if underline and underline == 'about' %}
+          <li class="active"><a href="{{ url_for('about') }}">About Us</a></li>
+		 {% else %}
+          <li><a href="{{ url_for('about') }}">About Us</a></li>
+		 {% endif %}
+		  {% if underline and underline == 'locator' %}
+          <li class="active"><a href="{{ url_for('locator') }}">Locator</a></li>
+		 {% else %}
+          <li><a href="{{ url_for('locator') }}">Locator</a></li>
+		 {% endif %}
+		  {% if underline and underline == 'doctors' %}
+          <li class="active"><a href="{{ url_for('doctors') }}">Doctors</a></li>
+		 {% else %}
+          <li><a href="{{ url_for('doctors') }}">Doctors</a></li>
+		 {% endif %}
+		 {% if underline and underline == 'contact' %}
+          <li class="active"><a href="{{ url_for('contact') }}">Contact</a></li>
+		 {% else %}
+          <li><a href="{{ url_for('contact') }}">Contact</a></li>
+		 {% endif %}
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      <a href="{{ url_for('login') }}" class="appointment-btn scrollto">Log In</a>
+      <a href="{{ url_for('signup') }}" class="appointment-btn scrollto">Sign Up</a>
+
+    </div>
+  </header><!-- End Header -->

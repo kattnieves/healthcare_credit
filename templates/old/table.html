@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>
+			{{ title }}
+		</title>
+	</head>
+	<body>
+		<table border='1'>
+			<tr>
+				{% for header in headers %}
+				<th>{{ header }}</th>
+				{% endfor %}
+			</tr>
+			{% for row in results %}
+			<tr>
+				{% for element in row %}
+					<td>{{ element }}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<section id="appointment" class="appointment section-bg">
+   <div class="container">
+      <div class="section-title">
+         <h2>Find a Location</h2>
+      </div>
+      <form action="{{ url_for('locator') }}" method="GET">
+         <div class="form-row justify-content-md-center">
+            <div class="form-group col-md-3">
+               {{ form.practice_name.label }}
+               {{ form.practice_name(class="form-control") }}
+            </div>
+            <div class="form-group col-md-2">
+            {{ form.speciality.label }}
+			{{ form.speciality(class="form-control") }}
+            </div>
+            <div class="form-group col-md-2">
+               {{ form.radius.label }}
+			   {{ form.radius(class="form-control") }}
+			</div>
+            <div class="form-group col-md-2">
+               {{ form.city_zip.label }}
+			   {{ form.city_zip(class="form-control") }}
+            </div>
+         </div>
+         <!--   <div class="text-center"><a href="locator.html" type="submit" class="appointment-btn scrollto">Search</a></div> -->
+         {{ form.submit(class="form-control") }}
+      </form>
+   </div>
+   <!--button type="submit" class="btn btn-primary" align="center">SEARCH</button>
+      <!--button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button-->
+   <!--button type="button" class="btn btn-primary align-item-center btn-lg ">SEARCH</button-->
+</section>
+<!-- End Appointment Section -->
