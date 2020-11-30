@@ -143,7 +143,8 @@ def login():
             return redirect(url_for('home'))
             #return f"<h1> { user.username } has logged in"
         else:
-            return "<h1>Login failed</h1>"
+            flash(f'Login failed', 'danger')
+            return redirect(url_for('home'))
     else:
         return render_template('login.html', form = form)
 
