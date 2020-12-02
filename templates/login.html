@@ -7,11 +7,25 @@
   <div class="form-group">
     {{ form.email.label(class="form-control-label") }}
     {{ form.email(class="form-control form-control-lg") }}
+	{% if form.email.errors %}
+		{% for email_error in form.email.errors %}
+			<div class="alert alert-danger">
+				{{ email_error }}
+			</div>
+		{% endfor %}
+	{% endif %}
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
   <div class="form-group">
     {{ form.password.label(class="form-control-label") }}
     {{ form.password(class="form-control form-control-lg") }}
+	{% if form.password.errors %}
+		{% for password_error in form.password.errors %}
+			<div class="alert alert-danger">
+				{{ password_error }}
+			</div>
+		{% endfor %}
+	{% endif %}
   </div>
   <div class="form-check">
     {{ form.remember(class="form-check-input") }}

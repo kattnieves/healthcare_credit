@@ -146,6 +146,8 @@ def login():
             flash(f'Login failed', 'danger')
             return redirect(url_for('home'))
     else:
+        print(form.errors)
+        print(form.email.errors)
         return render_template('login.html', form = form)
 
 if __name__ == '__main__':
