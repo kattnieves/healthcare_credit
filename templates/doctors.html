@@ -1,18 +1,33 @@
 {% extends 'layout.html' %}
 {% block content %}
-<br><br><br><br><br><br><br><br><br><br>
-
-{% for doctor in doctors.items %}
-	<h4>{{doctor.id }} - {{ doctor.name }} - {{ doctor.speciality }}</h4>
-	<br>
-{% endfor %}
-
-{% for page in doctors.iter_pages() %}
-	{% if page %}
-		<a href="{{ url_for('doctors', page_num = page) }}">{{ page }}</a>
-	{% else %}
-		...
-	{% endif %}
-{% endfor %}
-<br>
+<br><br><br><br><br><br><br>
+<section> 
+  <div class="container">
+    <div class="section-title">
+      <h2>Find a Doctor</h2>
+    </div>
+    <form action="{{ url_for('doctors') }}" method="GET">
+      <div class="form-row justify-content-md-center">
+        <div class="form-group col-md-3">
+          {{ form.practice_name.label }}
+          {{ form.practice_name(class="form-control") }}
+        </div>
+        <div class="form-group col-md-2">
+          {{ form.speciality.label }}
+          {{ form.speciality(class="form-control") }}
+        </div>
+      </div>
+      {{ form.submit(class="form-control") }}
+    </form>
+  </div>
+  {% if results == None %}
+  {% elif not results %}
+    <h3>Could not find Doctors for search query</h3>
+  {% else %}
+    {% for doctor in results %}
+    <h4>{{ doctor.id }} - {{ doctor.name }} - {{ doctor.speciality }} - {{ doctor.address }}</h4>
+    <br>
+    {% endfor %}
+  {% endif %}
+</section>
 {% endblock %}

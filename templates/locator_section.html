@@ -20,14 +20,18 @@
             <div class="form-group col-md-2">
                {{ form.city_zip.label }}
 			   {{ form.city_zip(class="form-control") }}
+         {% if form.city_zip.errors and form.speciality.data %}
+           {% for city_zip_error in form.city_zip.errors %}
+             <div class ="alert alert-danger">
+               {{ city_zip_error }}
+             </div>
+           {% endfor %}
+         {% endif %}
             </div>
          </div>
          <!--   <div class="text-center"><a href="locator.html" type="submit" class="appointment-btn scrollto">Search</a></div> -->
          {{ form.submit(class="form-control") }}
       </form>
    </div>
-   <!--button type="submit" class="btn btn-primary" align="center">SEARCH</button>
-      <!--button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button-->
-   <!--button type="button" class="btn btn-primary align-item-center btn-lg ">SEARCH</button-->
 </section>
 <!-- End Appointment Section -->

@@ -47,8 +47,15 @@
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="{{ url_for('login') }}" class="appointment-btn scrollto">Log In</a>
-      <a href="{{ url_for('signup') }}" class="appointment-btn scrollto">Sign Up</a>
+      {% if current_user.is_authenticated %}
+        {% if current_user.is_doctor %}
+          <a href="{{ url_for('upload_csv') }}" class="appointment-btn scrollto">Upload CSV</a>
+        {% endif %}
+        <a href="{{ url_for('logout') }}" class="appointment-btn scrollto">Log Out</a>
+      {% else %}
+        <a href="{{ url_for('login') }}" class="appointment-btn scrollto">Log In</a>
+        <a href="{{ url_for('signup') }}" class="appointment-btn scrollto">Sign Up</a>
+      {% endif %}
 
     </div>
   </header><!-- End Header -->
