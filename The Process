@@ -1,0 +1,95 @@
+This is a file explaining the projects progression. This file only mentions highlights throughout the progression to show group 
+coordination and development.
+
+September 23: 
+The first group meeting is held via Zoom.
+Our goals are set as well as ideas on how to begin.
+The team discusses who would work best in each role. They are delegated as follows:
+Project Manager- Kaitlynn Nieves
+Business Analyst- Charles Marinelli 
+User Experience Expert- Jacob Martin
+Lead Developer- Arkit Pawar
+Quality Assurance Manager- Margaret Moore
+-The Project Manager sends 7 questions to the professor following the team meeting.
+These questions regard server hosting, desired program for wire framing, csv files and if more details will be provided.
+
+September 25:
+All questions are answered via email and shared with the team for clarity.
+-The next team meeting is scheduled.
+
+September 29: 
+Our Business Analyst submits the use case outline for review. (It is very efficient and does not need edits)
+Our User Experience Expert completes Axure (Wire Framing) tutorials.
+
+September 30:
+A team meeting is held.
+The team goes over business and functional requirements and begin drafting the file and cases.
+-The Project Manager and Lead Developer hold an additional meeting and edit/add to the business requirements/functional requirements.
+
+October 7:
+A team meeting is held.
+The team goes over the use case diagram developed by our Business Analyst.
+Our Lead developer completes PHP tutorials.
+
+October 13:
+Our User Experience Expert completes site wire frames.
+
+October 14:
+A team meeting is held.
+The team discusses front end development, theme, apperance and product logo.
+The team agrees on the desired logo and theme and our Lead Developer creates the site logo.
+
+October 26:
+Our Lead Developer completes tutorials on PHP&MySQL.
+Our Lead Developer develops a system based on the Wire Frames created by our User Experience Expert.
+
+October 28:
+A team meeting is held.
+Our Business Analyst begins developing a Power Point for a group presentation directed to our professor.
+The rest of the team begins adding their work and segments to the Power Point.
+
+November 2:
+Our Project Manager reaches out to the professor regarding group questions and clarification.
+-Feedback is received November 3rd and relayed to the group.
+
+November 8: 
+A team meeting is held.
+The group discusses further development to transition Wire Frames to integrate with the development.
+Our Quality Assurance Analyst begins producing test cases based of our prior use cases.
+
+November 10: 
+Our Lead Developer establishes the site URL.
+-healthcredit.tk
+
+November 13:
+Our Quality Assurance Manager completes all Test Cases.
+Our Lead Developer creates a CSV to sample the functionality of the site and its ability to search and upload files.
+Our Lead Developer begins establishing proper filtering function and coherent front/back end development.
+
+November 18: 
+A team meeting is held.
+The team reviews all work up until this point. Our Business Analyst and our User Experience Expert have finished
+all contributions to the project.
+The team established final stretch goals including:
+bug testing, bug reports, user login, provider login, walk though video.
+
+November 22:
+Our Lead Developer and Quality Assurance Manager hold a meeting.
+They work together to go over client acceptance testing and file bug reports.
+
+December 3:
+The group discusses a final presentaion date.
+We conclude and project all features to be completed during the week of December 14th.
+The presentation will be held December 18th and 6pm EST.
+
+December 12:
+Our Project Manager and Lead Developer hold a meeting.
+We go over the site, test functionalities and decide on how to approach the video.
+We further test filtering capabilities, csv uploading and the difference between provider and customer sign in.
+Several tests are ran in accordance with the project requirements.
+
+December 15:
+Our Lead Developer finalizes bug fixing and minor patches throughout the site.
+
+
+
